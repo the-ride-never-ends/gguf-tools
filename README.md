@@ -70,6 +70,11 @@ Here's what it can look like (little slice of an Orca 3B `attn_q`):
  `gguf-tensor-to-image.py --output ./imgs/tensor.png model.gguf '*'` — Save all tensors in `model.gguf` like `./imgs/output.weight.tensor.png`. *Note*: Be sure to quote or escape `*` when specifying it as an option.
 
 ***
+### `image_diff_heatmapper_mk2`
+
+Takes a specified layer from two large language models, normalizes their tensor values, takes their difference, then maps them to a heatmap raster. Grayscale is the most appropriate output, as it can then be turned into a false color image using GIS mapping software such as QGIS or ArcGIS.
+
+***
 
 ## Disclaimer
 
