@@ -72,12 +72,16 @@ Here's what it can look like (little slice of an Orca 3B `attn_q`):
 ***
 ### `image_diff_heatmapper_mk2`
 
-Takes a specified layer from two large language models, normalizes their tensor values, takes their difference, then maps them to a heatmap raster. Grayscale is the most appropriate output, as it can then be turned into a false color image using GIS mapping software such as QGIS or ArcGIS. Heatmaps of differences are useful for intuitively identifying the impact that fine-tuning has had on an instruct model.
+Takes a specified layer from two large language models, normalizes their tensor values, takes their difference, then maps them to a heatmap raster. Grayscale is the most appropriate output (although other options are available, as it can then be turned into a false color image using GIS mapping software such as QGIS or ArcGIS. Heatmaps of differences are useful for intuitively identifying the impact that fine-tuning has had on an instruct model. Use with the associated batch file `program_start_image_diff_heatmapper_mk2` is recommended
 
-Here's an example in QGIS of a false color heatmap (`grayscale`) of the differences in Block 21's Attention K layer between Llama-2-7b 8-bit and Llama-2-Chat-7b 8-bit.
+Here's an example in QGIS of a false color heatmap (`grayscale`) of the differences between Llama-2-7b 8-bit and Llama-2-Chat-7b 8-bit in their Block 21 Attention K layer.
 ![attn_q with no pants on](assets/diff_heatmap_example.png)
 
 Direct differences and differences in deviations from other central tendency (e.g. Median) are forthcoming.
+
+**Examples:**
+
+`image_diff_heatmapper_mk2.py model1.gguf model2.gguf output.weight --comparison_type=mean --color_mode=grayscale --output_path=out.png` - Compare the differences in `output.weight` between
 
 ***
 
