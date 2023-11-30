@@ -81,8 +81,7 @@ Direct differences and differences in deviations from other central tendency (e.
 
 **Examples:**
 
-`image_diff_heatmapper_mk2.py model1.gguf model2.gguf output.weight --comparison_type=mean --color_mode=grayscale --output_path=out.png` - Compare the differences in `output.weight` between
-
+`image_diff_heatmapper_mk2.py model1.gguf model2.gguf output.weight --comparison_type=mean --color_mode=grayscale --output_path=out.png` - Compare the differences in standard deviations away from the normalized `mean` in `output.weight` between `model1.gguf` and `model2.gguf` and output a `grayscale` heatmap to the image `out.png`.
 ***
 
 ## Disclaimer
