@@ -5,6 +5,8 @@ Random tools and experiments for manipulating or viewing the GGUF file format. S
 1. https://github.com/ggerganov/llama.cpp
 2. https://github.com/ggerganov/ggml
 
+Forked from KerfuffleV2's original repo: https://github.com/KerfuffleV2/gguf-tools
+
 ## Scripts
 
 All scripts support using `--help` for information on the commandline options.
