@@ -99,7 +99,7 @@ Takes two models, pulls and flattens their tensors, performs summary statistics 
 9. 75th percentile
 10. IQR
 11. skewness
-12. kurtosis.
+12. kurtosis
     
 Note that both models need to have the same number of layers and the Excel file must already exist in order for the program to work. Use with the associated batch file `program_start_gguf_compare_models_sum_stats` is recommended.
 ![attn_q with no pants on](assets/compare_models_sum_stats_example.png)
