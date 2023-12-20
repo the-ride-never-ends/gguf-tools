@@ -83,7 +83,11 @@ Direct differences and differences in deviations from other central tendency (e.
 
 `image_diff_heatmapper_mk2.py model1.gguf model2.gguf output.weight --comparison_type=mean --color_mode=grayscale --output_path=out.png` - Compare the differences in standard deviations away from the normalized `mean` in `output.weight` between `model1.gguf` and `model2.gguf` and output a `grayscale` heatmap of the magnitudes of these differences to the image `out.png`.
 ***
+### `gguf_compare_models_sum_stats`
 
+Takes two models, pulls and flattens their tensors, performs summary statistics on those layers, and saves these layers to an Excel file. Current output statistics include: mean, standard deviation, maximum, minimum, median, variance, range, 25th percentile, 75th percentile, IQR, skewness, and kurtosis. Both models need to have the same number of layers in order for it to work.
+
+Single model statistics and other statistical measures are forthcoming.
 ## Disclaimer
 
 These scripts are experimental and likely not very well tested. They may or may not work. Use at your own risk.
