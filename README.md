@@ -87,6 +87,7 @@ Direct differences and differences in deviations from other central tendency (e.
 
 Takes two models, pulls and flattens their tensors, performs summary statistics on those layers, and saves these layers to an Excel file. Current output statistics include: mean, standard deviation, maximum, minimum, median, variance, range, 25th percentile, 75th percentile, IQR, skewness, and kurtosis. Both models need to have the same number of layers in order for it to work.
 
+![attn_q with no pants on](assets/compare_models_sum_stats_example.png)
 
 Single model statistics and other statistical measures are forthcoming.
 ## Disclaimer
