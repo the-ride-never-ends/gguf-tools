@@ -85,11 +85,16 @@ Direct differences and differences in deviations from other central tendency (e.
 ***
 ### `gguf_compare_models_sum_stats`
 
-Takes two models, pulls and flattens their tensors, performs summary statistics on those layers, and saves these layers to an Excel file. Current output statistics include: mean, standard deviation, maximum, minimum, median, variance, range, 25th percentile, 75th percentile, IQR, skewness, and kurtosis. Both models need to have the same number of layers in order for it to work.
+Takes two models, pulls and flattens their tensors, performs summary statistics on those layers, and saves these layers to an Excel file. Current output statistics include: mean, standard deviation, maximum, minimum, median, variance, range, 25th percentile, 75th percentile, IQR, skewness, and kurtosis. Note that both models need to have the same number of layers and the Excel file must already exist in order for the program to work. Use with the associated batch file program_start_gguf_compare_models_sum_stats is recommended.
 
 ![attn_q with no pants on](assets/compare_models_sum_stats_example.png)
 
 Single model statistics and other statistical measures are forthcoming.
+
+**Examples:**
+
+`gguf_compare_models_sum_stats.py model1.gguf model2.gguf output.xlsx` - Output summary statistics for `model1.guff` and `model2.gguf` to `output.xlsx`.
+
 ## Disclaimer
 
 These scripts are experimental and likely not very well tested. They may or may not work. Use at your own risk.
